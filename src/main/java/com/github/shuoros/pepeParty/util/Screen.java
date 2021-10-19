@@ -17,4 +17,13 @@ public class Screen {
 			System.out.print("\033\143");
 		}
 	}
+
+	public static void clear(long sleep) {
+		try {
+			Thread.sleep(sleep);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		clear();
+	}
 }
