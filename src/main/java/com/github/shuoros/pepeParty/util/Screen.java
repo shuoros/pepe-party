@@ -14,11 +14,7 @@ public class Screen {
 				e.printStackTrace();
 			}
 		} else {
-			try {
-				Runtime.getRuntime().exec("clear");
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			System.out.print("\033\143");
 		}
 	}
 }
