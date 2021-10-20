@@ -6,12 +6,18 @@
 	<artifactId>pepe-party</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pepe-party</name>
+
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-
+	
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<!-- Build an executable JAR -->
@@ -22,7 +28,6 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
 							<mainClass>com.github.shuoros.pepeParty.PepeParty</mainClass>
 						</manifest>
 					</archive>
