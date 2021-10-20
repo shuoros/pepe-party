@@ -9,8 +9,22 @@ import java.util.stream.Collectors;
 
 import com.github.shuoros.pepeParty.model.Frame;
 
+/**
+ * FrameLoader utilities class.
+ * 
+ * @author Soroush Shemshadi
+ * @version 0.1.0
+ * @since 0.1.0
+ *
+ */
 public class FrameLoader {
 
+	/**
+	 * Load all .txt files as frames from the given path.
+	 * 
+	 * @param path Its a .files file which has paths to all of the frames.
+	 * @return A list contains all loaded frames.
+	 */
 	public static List<Frame> load(final String path) {
 		List<Frame> frames = new ArrayList<>();
 		for (String file : new BufferedReader(//
