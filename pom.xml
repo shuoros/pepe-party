@@ -18,6 +18,12 @@
 			<artifactId>jnativehook</artifactId>
 			<version>2.0.3</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.shuoros/JTerminal -->
+		<dependency>
+			<groupId>io.github.shuoros</groupId>
+			<artifactId>JTerminal</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
