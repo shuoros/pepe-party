@@ -30,7 +30,7 @@ public class EntityLoader {
                             Objects.requireNonNull(Thread.currentThread().getContextClassLoader()//
                                     .getResourceAsStream(file)),
                             StandardCharsets.UTF_8)).lines()//
-                    .collect(Collectors.joining("\n")).split("&")).iterator().forEachRemaining(entity -> {
+                    .collect(Collectors.joining("\n")).split("\n")).iterator().forEachRemaining(entity -> {
                 entities.add(//
                         new TextEntity(//
                                 Integer.parseInt(entity.split("-")[0]),//
