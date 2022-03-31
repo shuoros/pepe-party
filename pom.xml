@@ -8,6 +8,8 @@
 	<name>pepe-party</name>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -18,7 +20,6 @@
 			<artifactId>jnativehook</artifactId>
 			<version>2.0.3</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.github.shuoros/JTerminal -->
 		<dependency>
 			<groupId>io.github.shuoros</groupId>
 			<artifactId>JTerminal</artifactId>
