@@ -96,6 +96,7 @@ public class PepeParty implements NativeKeyListener {
     private static void dispose(int wait) {
         if (shutdown) {
             JTerminal.clear();
+            unRegisterKeyListener();
             System.exit(0);
         }
 
@@ -127,6 +128,15 @@ public class PepeParty implements NativeKeyListener {
 
         GlobalScreen.addNativeKeyListener(new PepeParty());
 
+    }
+
+    private static void unRegisterKeyListener(){
+        try {
+            GlobalScreen.unregisterNativeHook();
+        }
+        catch (NativeHookException ex) {
+            ex.printStackTrace();
+        }
     }
 
     /**
