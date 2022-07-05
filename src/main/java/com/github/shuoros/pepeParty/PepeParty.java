@@ -62,7 +62,7 @@ public class PepeParty implements NativeKeyListener {
 
             render();
 
-            dispose(1000);
+            dispose(100);
         }
     }
 
