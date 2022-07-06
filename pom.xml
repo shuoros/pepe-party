@@ -4,8 +4,40 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.shuoros</groupId>
 	<artifactId>pepe-party</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
 	<name>pepe-party</name>
+	<description>If you are tired of coding, invite Pepe to throw a party in your terminal.</description>
+	<url>https://github.com/shuoros/pepe-party</url>
+	<inceptionYear>2022</inceptionYear>
+
+	<developers>
+		<developer>
+			<name>Soroush Shemshadi</name>
+			<email>shuoros@yahoo.com</email>
+			<url>https://shuoros.github.io</url>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/shuoros/pepe-party.git</connection>
+		<developerConnection>scm:git:ssh://github.com:shuoros/pepe-party.git</developerConnection>
+		<url>http://github.com/shuoros/pepe-party/tree/main</url>
+		<tag>v1.0.0</tag>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://github.com/shuoros/pepe-party/blob/main/LICENSE</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/shuoros/pepe-party/issues</url>
+	</issueManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
