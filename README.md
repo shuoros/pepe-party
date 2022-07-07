@@ -1,2 +1,89 @@
-# pepe-party
-If you are tired of life, invite Pepe to throw a party in your terminal.
+
+<p align="center">
+    <h1 align="center">🐸 Pepe Party 🐸</h1>
+    <p align="center">If you are tired of coding, invite Pepe to throw a party in your terminal!</p>
+</p>
+<p align="center">
+    <img style="height: 500px" src="https://user-images.githubusercontent.com/45015114/177473188-f355fa59-585b-4ebe-b70b-4ac7c1c82c7e.gif" alt="dancing pepe" />
+</p>
+<h4 align="center">Powered by</h4>
+<p align="center">
+    <a href="https://github.com/shuoros/JTerminal">
+    <img style="height: 120px" src="https://user-images.githubusercontent.com/45015114/139809463-417377ca-2eef-4cec-9689-bd841b0ce5db.png" alt="JTerminal's logo" />
+    </a>
+</p>
+<p align="center">
+    	<a href="https://github.com/TheXSolutions/badgify/search?l=java">
+      		<img src="https://badgify.thex.solutions/api/badge/link?title=8&icon=java&size=m&bg=random" />
+    	</a>
+	<a href="https://github.com/TheXSolutions/badgify/blob/main/LICENSE">
+      		<img src="https://badgify.thex.solutions/api/badge/link?title=MIT&icon=scale-balanced&size=m&bg=random" />
+    </a>
+</p>
+<p align="center">
+    <a href="https://github.com/shuoros/pepe-party/issues">
+      		<img src="https://badgify.thex.solutions/api/badge/title?title=Reoprt%20Bug&bg=gray&size=m&theme=edge" />
+    </a>
+    <a href="#contribution">
+      		<img src="https://badgify.thex.solutions/api/badge/title?title=Contribute&bg=gray&size=m&theme=edge" />
+    </a>
+    <a href="#installation">
+      		<img src="https://badgify.thex.solutions/api/badge/title?title=How%20To%20Use&bg=gray&size=m&theme=edge" />
+    </a>
+</p>
+<p align="center">
+	If you like this project, please buy a cup of coffee for me=))☕
+</p>
+<p align="center">
+	<a href="https://commerce.coinbase.com/checkout/6e1472f5-3481-4949-84cf-a915e0cb8d0c">
+      		<img src="https://badgify.thex.solutions/api/badge/link?title=Donate%20With%20Crypto&icon=hand-holding-dollar&bg=ef730f&size=m&theme=edge" />
+	</a>
+</p>
+<p align="center">
+	<img src="https://badgify.thex.solutions/api/badge/icon?icon=heart&bg=fff&color=f23d96&size=s" /> <img src="https://badgify.thex.solutions/api/badge/icon?icon=peace&bg=fff&color=0286a9&size=s" />
+</p>
+
+## Installation
+### Install directly
+**Make sure you have at least `java-8` on your machine installed!**
+- Clone the repo on your machine: `git clone https://github.com/shuoros/pepe-party.git`
+- Go to root directory of project: `cd pepe-party`
+- Give permission to `install.sh` file: `chmod +x install.sh`
+- Run the `install` with root user: `sudo  ./install.sh`
+
+###Install from snap
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pepe-party)
+
+`sudo snap install pepe-party`
+
+### Install from docker
+The `Pepe Party`'s docker image available on [dockerhub](https://hub.docker.com/repository/docker/shuoros/pepe-party).
+```bash
+docker pull shuoros/pepe-party
+docker run -it --rm shuoros/pepe-party:latest
+```
+## Run
+Call Pepe for throwing the party by running this command on your terminal:
+```
+pepe-party
+```
+
+## Quit
+You can quit the party by either hitting `Esc` or `Ctrl+C`.
+
+## Authors
+The `Pepe Party` is developed by [Soroush Shemshadi](https://shuoros.github.io) and the [contributors](https://github.com/shuoros/pepe-party/blob/main/CONTRIBUTORS.md).
+
+## Contribution
+If you want to contribute on this project, please read the [contribution guide](https://github.com/shuoros/pepe-party/blob/main/CONTRIBUTE.md).
+
+## Releases
+To see the changes in different versions of `Pepe Party`, you can read the [release notes](https://github.com/shuoros/pepe-party/blob/main/RELEASENOTES.md).
+
+## Issues
+If you encounter a bug or vulnerability, please report it in [Issues](https://github.com/shuoros/pepe-party/issues).
+
+## Acknowledgement
+A great thanks to [John Hobbs](https://github.com/jmhobbs) because his wonderful [terminal-parrot](https://github.com/jmhobbs/terminal-parrot) project inspired me to create the `Pepe Party`.
+
+And Thanks to [Sarah Rajabi](https://github.com/sarahrajabi) for her helps on drawing the Pepe.
