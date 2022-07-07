@@ -51,7 +51,8 @@
 - Give permission to `install.sh` file: `chmod +x install.sh`
 - Run the `install` with root user: `sudo  ./install.sh`
 
-###Install from snap
+### Install from snap
+
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pepe-party)
 
 `sudo snap install pepe-party`
