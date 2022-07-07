@@ -1,0 +1,35 @@
+name: pepe-party-party
+version: '1.0.0'
+summary: Invite pepe-party to your terminal!
+description: |
+  If you are tired of coding, invite Pepe to throw a party in your terminal.!
+  To invite Pepe, run "pepe" command in your terminal!
+  To quit the party either hit "Esc" or "Ctrl+C"
+  Have fun:D!
+  Homepage: https://github.com/shuoros/pepe-party
+
+title: Pepe Party
+website: https://github.com/shuoros/pepe-party-party
+contact: shuoros@yahoo.com
+issues: https://github.com/shuoros/pepe-party-party/issues
+icon: ./icon.png
+license: MIT
+
+base: core18
+grade: stable
+confinement: strict
+
+apps:
+  pepe-party:
+    command: bin/java -jar $SNAP/jar/pepe-party-party-$SNAP_VERSION-jar-with-dependencies.jar
+
+parts:
+  pepe-party:
+    plugin: maven
+    source: https://github.com/shuoros/pepe-party-party.git
+    source-tag: main
+    source-type: git
+    maven-options: [-DskipTests]
+    override-prime: |
+        snapcraftctl prime
+        rm -vf usr/lib/jvm/java-11-openjdk-*/lib/security/blacklisted.certs
