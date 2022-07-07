@@ -4,10 +4,44 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.shuoros</groupId>
 	<artifactId>pepe-party</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
 	<name>pepe-party</name>
+	<description>If you are tired of coding, invite Pepe to throw a party in your terminal.</description>
+	<url>https://github.com/shuoros/pepe-party</url>
+	<inceptionYear>2022</inceptionYear>
+
+	<developers>
+		<developer>
+			<name>Soroush Shemshadi</name>
+			<email>shuoros@yahoo.com</email>
+			<url>https://shuoros.github.io</url>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/shuoros/pepe-party.git</connection>
+		<developerConnection>scm:git:ssh://github.com:shuoros/pepe-party.git</developerConnection>
+		<url>http://github.com/shuoros/pepe-party/tree/main</url>
+		<tag>v1.0.0</tag>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://github.com/shuoros/pepe-party/blob/main/LICENSE</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/shuoros/pepe-party/issues</url>
+	</issueManagement>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -17,6 +51,11 @@
 			<groupId>com.1stleg</groupId>
 			<artifactId>jnativehook</artifactId>
 			<version>2.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.shuoros</groupId>
+			<artifactId>JTerminal</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 	</dependencies>
 
@@ -33,13 +72,14 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.5.5</version>
+				<version>3.1.0</version>
 				<configuration>
 					<archive>
 						<manifest>

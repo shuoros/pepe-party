@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar "/home/.pepe-party/pepe-party.jar"
