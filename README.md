@@ -4,7 +4,7 @@
     <p align="center">If you are tired of coding, invite Pepe to throw a party in your terminal!</p>
 </p>
 <p align="center">
-    <img style="height: 500px" src="https://user-images.githubusercontent.com/45015114/177473188-f355fa59-585b-4ebe-b70b-4ac7c1c82c7e.gif" alt="dancing pepe" />
+    <img width="200" src="https://user-images.githubusercontent.com/45015114/177473188-f355fa59-585b-4ebe-b70b-4ac7c1c82c7e.gif" alt="dancing pepe" />
 </p>
 <h4 align="center">Powered by</h4>
 <p align="center">
@@ -13,11 +13,14 @@
     </a>
 </p>
 <p align="center">
-    	<a href="https://github.com/TheXSolutions/badgify/search?l=java">
-      		<img src="https://badgify.thex.solutions/api/badge/link?title=8&icon=java&size=m&bg=random" />
-    	</a>
-	<a href="https://github.com/TheXSolutions/badgify/blob/main/LICENSE">
-      		<img src="https://badgify.thex.solutions/api/badge/link?title=MIT&icon=scale-balanced&size=m&bg=random" />
+    <a href="https://github.com/shuoros/pepe-party">
+      		<img src="https://badgify.thex.solutions/api/badge/link?title=pepe-party-v1.1.0&icon=github&size=m&bg=orange" />
+    </a>
+    <a href="https://github.com/shuoros/pepe-party/search?l=java">
+      		<img src="https://badgify.thex.solutions/api/badge/link?title=8&icon=java&size=m&bg=yellow" />
+    </a>
+	<a href="https://github.com/shuoros/pepe-party/blob/main/LICENSE">
+      		<img src="https://badgify.thex.solutions/api/badge/link?title=MIT&icon=scale-balanced&size=m&bg=lavender" />
     </a>
 </p>
 <p align="center">
@@ -69,7 +72,7 @@ pepe-party
 ```
 
 ## Quit
-You can quit the party by either hitting `Esc` or `Ctrl+C`.
+You can quit the party by hitting `Ctrl+C`.
 
 ## Authors
 The `Pepe Party` is developed by [Soroush Shemshadi](https://shuoros.github.io) and the [contributors](https://github.com/shuoros/pepe-party/blob/main/CONTRIBUTORS.md).
