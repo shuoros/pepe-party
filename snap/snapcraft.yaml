@@ -1,10 +1,13 @@
 name: pepe-party
-version: '1.1.0'
+version: '1.2.0'
 summary: Invite pepe-party to your terminal!
 description: |
-  If you are tired of coding, invite Pepe to throw a party in your terminal.!
+  If you are tired of coding, invite Pepe to throw a party in your terminal!
+  NOW WITH MUSIC🥳🎉
+  In this version Pepe dances with Shooting Stars by Bag Raiders. 
   To invite Pepe, run "pepe-party" command in your terminal!
-  To quit the party either hit "Esc" or "Ctrl+C"
+  If you want to mute the music you can pass -m argument.
+  To quit the party either hit "Ctrl+C"
   Have fun:D!
   Homepage: https://github.com/shuoros/pepe-party
 

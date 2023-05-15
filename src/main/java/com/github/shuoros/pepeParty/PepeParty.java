@@ -1,23 +1,26 @@
 package com.github.shuoros.pepeParty;
 
-import com.github.shuoros.pepeParty.model.Frame;
-import com.github.shuoros.pepeParty.util.EntityLoader;
-import com.github.shuoros.pepeParty.util.FrameLoader;
+import com.github.shuoros.pepeParty.domain.Frame;
+import com.github.shuoros.pepeParty.service.EntityService;
+import com.github.shuoros.pepeParty.service.FrameService;
+import com.github.shuoros.pepeParty.util.MusicPlayer;
 import io.github.shuoros.jterminal.JTerminal;
 import io.github.shuoros.jterminal.util.TextEntity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * If you are tired of life, invite Pepe to throw a party in your terminal.
  *
  * @author Soroush Shemshadi
- * @version 0.1.0
- * @since 0.1.0
+ * @version 1.2.0
+ * @since 1.2.0
  */
 public class PepeParty {
 
+    private static final String SHOOTING_STARS_WAV = "shooting_stars.wav";
     private static List<Frame> frames = new ArrayList<>();
     private static List<List<TextEntity>> entities = new ArrayList<>();
     private static int frameIndex = 0;
@@ -25,17 +28,36 @@ public class PepeParty {
     private static List<TextEntity> currentEntity;
 
     /**
-     * Application runner. First it loads the frames by
-     * {@link com.github.shuoros.pepeParty.util.FrameLoader} and then call the
-     * {@code run()} to run the party.
+     * Application runner.
+     * Initializes the configurations and then hits run.
      *
      * @param args Command line arguments.
      */
     public static void main(String[] args) {
-        frames = FrameLoader.load("frames.files");
-        entities = EntityLoader.load("entities.files");
-
+        init(Arrays.asList(args));
         run();
+    }
+
+    /**
+     * Loads the frames and entities by {@link FrameService} and {@link EntityService}.
+     * Configs the args.
+     *
+     * @param args Command line arguments.
+     */
+    private static void init(List<String> args) {
+        frames = FrameService.load("frames.files");
+        entities = EntityService.load("entities.files");
+
+        applyArguments(args);
+    }
+
+    /**
+     * Gives the args and apply them to the app.
+     *
+     * @param args Command line arguments.
+     */
+    private static void applyArguments(List<String> args) {
+        if (!args.contains("-m")) MusicPlayer.play(SHOOTING_STARS_WAV);
     }
 
     /**
