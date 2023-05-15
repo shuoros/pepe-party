@@ -3,16 +3,13 @@ package com.github.shuoros.pepeParty;
 import com.github.shuoros.pepeParty.domain.Frame;
 import com.github.shuoros.pepeParty.service.EntityService;
 import com.github.shuoros.pepeParty.service.FrameService;
+import com.github.shuoros.pepeParty.util.MusicPlayer;
 import io.github.shuoros.jterminal.JTerminal;
 import io.github.shuoros.jterminal.util.TextEntity;
 
-import javax.sound.sampled.*;
-import java.io.BufferedInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * If you are tired of life, invite Pepe to throw a party in your terminal.
@@ -31,9 +28,8 @@ public class PepeParty {
     private static List<TextEntity> currentEntity;
 
     /**
-     * Application runner. First it loads the frames by
-     * {@link FrameService} and then call the
-     * {@code run()} to run the party.
+     * Application runner.
+     * Initializes the configurations and then hits run.
      *
      * @param args Command line arguments.
      */
@@ -42,29 +38,26 @@ public class PepeParty {
         run();
     }
 
+    /**
+     * Loads the frames and entities by {@link FrameService} and {@link EntityService}.
+     * Configs the args.
+     *
+     * @param args Command line arguments.
+     */
     private static void init(List<String> args) {
         frames = FrameService.load("frames.files");
         entities = EntityService.load("entities.files");
 
-        if (!args.contains("-m")) playMusic();
+        applyArguments(args);
     }
 
-    private static void playMusic() {
-        try {
-            final AudioInputStream audioIn = AudioSystem.getAudioInputStream(
-                    new BufferedInputStream(
-                            Objects.requireNonNull(
-                                    Thread.currentThread().getContextClassLoader()
-                                            .getResourceAsStream(SHOOTING_STARS_WAV)
-                            )
-                    )
-            );
-            final Clip clip = AudioSystem.getClip();
-            clip.open(audioIn);
-            clip.start();
-        } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-            throw new RuntimeException(e);
-        }
+    /**
+     * Gives the args and apply them to the app.
+     *
+     * @param args Command line arguments.
+     */
+    private static void applyArguments(List<String> args) {
+        if (!args.contains("-m")) MusicPlayer.play(SHOOTING_STARS_WAV);
     }
 
     /**

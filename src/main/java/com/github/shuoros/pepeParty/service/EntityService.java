@@ -26,14 +26,14 @@ public class EntityService {
     }
 
     private static String[] loadEntity(String file) {
-        return new BufferedReader(FileLoader.load(file))
+        return new BufferedReader(FileLoader.loadFile(file))
                 .lines()
                 .collect(Collectors.joining("\n"))
                 .split("\n");
     }
 
     private static List<String> loadEntityList(String path) {
-        return new BufferedReader(FileLoader.load(path))
+        return new BufferedReader(FileLoader.loadFile(path))
                 .lines()
                 .collect(Collectors.toList());
     }

@@ -32,13 +32,13 @@ public class FrameService {
     }
 
     private static List<String> loadFrameList(String path) {
-        return new BufferedReader(FileLoader.load(path))
+        return new BufferedReader(FileLoader.loadFile(path))
                 .lines()
                 .collect(Collectors.toList());
     }
 
     private static String loadFrame(String file) {
-        return new BufferedReader(FileLoader.load(file))
+        return new BufferedReader(FileLoader.loadFile(file))
                 .lines()
                 .collect(Collectors.joining("\n"));
     }
