@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import com.github.shuoros.pepeParty.model.Frame;
+import com.github.shuoros.pepeParty.domain.Frame;
 
 /**
  * FrameLoader utilities class.

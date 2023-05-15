@@ -1,13 +1,18 @@
 package com.github.shuoros.pepeParty;
 
-import com.github.shuoros.pepeParty.model.Frame;
+import com.github.shuoros.pepeParty.domain.Frame;
 import com.github.shuoros.pepeParty.util.EntityLoader;
 import com.github.shuoros.pepeParty.util.FrameLoader;
 import io.github.shuoros.jterminal.JTerminal;
 import io.github.shuoros.jterminal.util.TextEntity;
 
+import javax.sound.sampled.*;
+import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * If you are tired of life, invite Pepe to throw a party in your terminal.
@@ -18,6 +23,7 @@ import java.util.List;
  */
 public class PepeParty {
 
+    private static final String SHOOTING_STARS_WAV = "shooting_stars.wav";
     private static List<Frame> frames = new ArrayList<>();
     private static List<List<TextEntity>> entities = new ArrayList<>();
     private static int frameIndex = 0;
@@ -32,10 +38,33 @@ public class PepeParty {
      * @param args Command line arguments.
      */
     public static void main(String[] args) {
+        init(Arrays.asList(args));
+        run();
+    }
+
+    private static void init(List<String> args) {
         frames = FrameLoader.load("frames.files");
         entities = EntityLoader.load("entities.files");
 
-        run();
+        if (!args.contains("-m")) playMusic();
+    }
+
+    private static void playMusic() {
+        try {
+            final AudioInputStream audioIn = AudioSystem.getAudioInputStream(
+                    new BufferedInputStream(
+                            Objects.requireNonNull(
+                                    Thread.currentThread().getContextClassLoader()
+                                            .getResourceAsStream(SHOOTING_STARS_WAV)
+                            )
+                    )
+            );
+            final Clip clip = AudioSystem.getClip();
+            clip.open(audioIn);
+            clip.start();
+        } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
