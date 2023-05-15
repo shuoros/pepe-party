@@ -1,8 +1,8 @@
 package com.github.shuoros.pepeParty;
 
 import com.github.shuoros.pepeParty.domain.Frame;
-import com.github.shuoros.pepeParty.util.EntityLoader;
-import com.github.shuoros.pepeParty.util.FrameLoader;
+import com.github.shuoros.pepeParty.service.EntityService;
+import com.github.shuoros.pepeParty.service.FrameService;
 import io.github.shuoros.jterminal.JTerminal;
 import io.github.shuoros.jterminal.util.TextEntity;
 
@@ -32,7 +32,7 @@ public class PepeParty {
 
     /**
      * Application runner. First it loads the frames by
-     * {@link com.github.shuoros.pepeParty.util.FrameLoader} and then call the
+     * {@link FrameService} and then call the
      * {@code run()} to run the party.
      *
      * @param args Command line arguments.
@@ -43,8 +43,8 @@ public class PepeParty {
     }
 
     private static void init(List<String> args) {
-        frames = FrameLoader.load("frames.files");
-        entities = EntityLoader.load("entities.files");
+        frames = FrameService.load("frames.files");
+        entities = EntityService.load("entities.files");
 
         if (!args.contains("-m")) playMusic();
     }

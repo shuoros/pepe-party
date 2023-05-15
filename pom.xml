@@ -23,7 +23,7 @@
 		<connection>scm:git:git://github.com/shuoros/pepe-party.git</connection>
 		<developerConnection>scm:git:ssh://github.com:shuoros/pepe-party.git</developerConnection>
 		<url>http://github.com/shuoros/pepe-party/tree/main</url>
-		<tag>v1.0.0</tag>
+		<tag>v1.2.0</tag>
 	</scm>
 
 	<licenses>
