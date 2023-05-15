@@ -2,10 +2,10 @@ package com.github.shuoros.pepeParty.domain;
 
 /**
  * Frame model.
- * 
+ *
  * @author Soroush Shemshadi
- * @version 0.1.0
- * @since 0.1.0
+ * @version 1.2.0
+ * @since 1.2.0
  *
  */
 public class Frame {

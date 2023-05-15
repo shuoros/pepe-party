@@ -9,18 +9,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * FrameLoader utilities class.
+ * A service class to load and process the frame files.
  *
  * @author Soroush Shemshadi
- * @version 0.1.0
- * @since 0.1.0
+ * @version 1.2.0
+ * @since 1.2.0
  */
 public class FrameService {
 
     /**
      * Load all .txt files as frames from the given path.
      *
-     * @param path Its a .files file which has paths to all of the frames.
+     * @param path It's a .files file which has paths to all the frames.
      * @return A list contains all loaded frames.
      */
     public static List<Frame> load(final String path) {

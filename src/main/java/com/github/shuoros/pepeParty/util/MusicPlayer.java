@@ -1,15 +1,23 @@
 package com.github.shuoros.pepeParty.util;
 
 import javax.sound.sampled.*;
-import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.util.Objects;
 
+/**
+ * @author Soroush Shemshadi
+ * @version 1.2.0
+ * @since 1.2.0
+ */
 public class MusicPlayer {
 
-    public static void play(String music) {
+    /**
+     * Playes a wav audio file in the background of app.
+     *
+     * @param path of audio file.
+     */
+    public static void play(String path) {
         try {
-            final AudioInputStream audioIn = AudioSystem.getAudioInputStream(FileLoader.loadMusic(music));
+            final AudioInputStream audioIn = AudioSystem.getAudioInputStream(FileLoader.loadMusic(path));
             final Clip clip = AudioSystem.getClip();
             clip.open(audioIn);
             clip.start();
