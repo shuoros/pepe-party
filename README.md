@@ -95,10 +95,12 @@ cd pepe-party
 ```bash
 chmod +x install.sh
 ```
-- Run the `install` with root user: 
+- Run the `install.sh` file **without root permissions**: 
 ```bash
-sudo  ./install.sh
+./install.sh
  ```
+
+Note: an uninstall script is also provided for anyone interested in uninstalling the manual installation through the `install.sh` script.
 
 ### Install from snap
 
