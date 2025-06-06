@@ -7,4 +7,5 @@
 ## 1.2.0
 - Now Pepe has some music to dance with🥳🎉
   - Music Credit: [Bag Raiders - Shooting Stars](https://www.youtube.com/watch?v=feA64wXhbjo)
-
+## 1.3.0
+Fixed a crash when playing ALAW audio by converting to PCM format

@@ -1,2 +1,5 @@
 #!/bin/bash
-java -jar "/home/.pepe-party/pepe-party.jar"
+
+JAR_DIR="$HOME/.pepe-party"
+
+java -jar "$JAR_DIR/pepe-party.jar"
