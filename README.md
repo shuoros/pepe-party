@@ -75,8 +75,9 @@
 
 [//]: # (</p>)
 
-## v1.2.0
+## v1.3.0
 Now Pepe has some music to dance with🥳🎉
+- Fixed audio formatting issues
 
 - Music Credit: [Bag Raiders - Shooting Stars](https://www.youtube.com/watch?v=feA64wXhbjo)
 
